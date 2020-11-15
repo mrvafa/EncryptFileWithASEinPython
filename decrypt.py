@@ -6,7 +6,7 @@
 
 """
 This is decryption base on AES in Python.
-AES algorithms is one of the most secure encription algorithms.
+AES algorithms is one of the most secure encryption algorithms.
 """
 import hashlib
 import os

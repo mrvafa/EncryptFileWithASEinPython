@@ -2,12 +2,13 @@ from unittest import TestCase
 from encrypt import Encrypt
 import os
 
+
 class Encryption(TestCase):
 
     def test_encryption_len(self):
         msg = b'hello there are some bytes over here'
         key = 'This is sample key'
-        msg_lenght = len(msg)
+        msg_length = len(msg)
         filename = 'test_len.txt'
         file = open(filename, 'wb')
         file.write(msg)
@@ -16,4 +17,4 @@ class Encryption(TestCase):
         encrypted_msg = encrypted_file.read()
         encrypted_msg_len = len(encrypted_msg)
         os.remove(filename)
-        self.assertEqual(msg_lenght, encrypted_msg_len)
+        self.assertEqual(msg_length, encrypted_msg_len)

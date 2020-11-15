@@ -29,7 +29,7 @@ class Decrypt:
         decryption_content = cipher.decrypt(encrypt_content).rstrip(b'0')
         decryption_file_filename = self.filename if '.' in self.filename else self.filename + '.'
         filename_split_with_dot = decryption_file_filename.split('.')
-        decryption_file_filename = '.'.join(filename_split_with_dot[:-1]) + '.encrypted'
+        decryption_file_filename = '.'.join(filename_split_with_dot[:-1]) + '.decrypted'
         filename_counter = 1
         while os.path.isfile(decryption_file_filename):
             decryption_file_filename = '.'.join(filename_split_with_dot[:-1]) + f'_{filename_counter}.encrypted'

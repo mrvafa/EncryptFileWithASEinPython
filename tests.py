@@ -6,7 +6,7 @@ from encrypt import Encrypt
 
 class Encryption(TestCase):
 
-    def test_encryption_len(self):
+    def test_encryption_create_file(self):
         msg = b'hello there are some bytes over here'
         key = 'This is sample key'
         filename = 'test_len.txt'

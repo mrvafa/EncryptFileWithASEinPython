@@ -9,7 +9,7 @@ class Encryption(TestCase):
     def test_encryption_create_file(self):
         msg = b'hello there are some bytes over here'
         key = 'This is sample key'
-        filename = 'test_len.txt'
+        filename = 'test_create_file.txt'
         file = open(filename, 'wb')
         file.write(msg)
         e = Encrypt(filename, key)

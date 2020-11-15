@@ -1,5 +1,6 @@
 from unittest import TestCase
 from encrypt import Encrypt
+import os
 
 class Encryption(TestCase):
 
@@ -14,4 +15,5 @@ class Encryption(TestCase):
         encrypted_file = open(e.generate_encrypted_file(), 'rb')
         encrypted_msg = encrypted_file.read()
         encrypted_msg_len = len(encrypted_msg)
+        os.remove(filename)
         self.assertEqual(msg_lenght, encrypted_msg_len)

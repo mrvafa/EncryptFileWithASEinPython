@@ -32,7 +32,7 @@ class Decrypt:
         decryption_file_filename = '.'.join(filename_split_with_dot[:-1]) + '.decrypted'
         filename_counter = 1
         while os.path.isfile(decryption_file_filename):
-            decryption_file_filename = '.'.join(filename_split_with_dot[:-1]) + f'_{filename_counter}.encrypted'
+            decryption_file_filename = '.'.join(filename_split_with_dot[:-1]) + f'_{filename_counter}.decrypted'
             filename_counter += 1
         file = open(decryption_file_filename, 'wb')
         file.write(decryption_content)

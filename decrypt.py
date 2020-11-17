@@ -26,7 +26,9 @@ class Decrypt:
         cipher = AES.new(key=self.key, mode=self.mode, IV=self.iv)
         file = open(self.filename, 'rb')
         encrypt_content = file.read()
-        decryption_content = cipher.decrypt(encrypt_content).rstrip(b'0')
+        decryption_content = cipher.decrypt(encrypt_content)
+        decryption_content = decryption_content.rstrip(b'0') if str(decryption_content)[2] == '0' else decryption_content.rstrip(b'1')
+        decryption_content = decryption_content[1:]
         decryption_file_filename = self.filename if '.' in self.filename else self.filename + '.'
         filename_split_with_dot = decryption_file_filename.split('.')
         decryption_file_filename = '.'.join(filename_split_with_dot[:-1]) + '.decrypted'

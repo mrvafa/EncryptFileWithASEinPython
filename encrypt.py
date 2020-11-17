@@ -24,8 +24,9 @@ class Encrypt:
         file = open(self.filename, 'rb')
         file_content = file.read()
 
+        file_content = (b'0' + file_content) if str(file_content)[len(str(file_content)) - 2] != '0' else (b'1' + file_content)
         while len(file_content) % 16 != 0:
-            file_content += b'0'
+            file_content += bytes([file_content[0]])
         return file_content
 
     def generate_encrypted_file(self):

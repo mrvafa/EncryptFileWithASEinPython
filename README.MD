@@ -30,6 +30,13 @@ called mode. For example one of the secure modes is CBC.
 In the first round we need initial Vector (IV). IV is a string that will XOR with 128 bit of our content.
 The result will use to XOR with the next block. So each block of 128 bit will XOR by the previous Ciphertext.
 
+## Prerequisites
+0. Make sure you have python 3 installed
+1. Clone the repository
+2. Create virtualenv using `python3 -m virtualenv --python=python3 env` or any commands you use to create env
+3. Activate virtualenv using `. env/bin/activate` or any commands you use to activate your env
+4. Install requirements using `pip install -r requirements.txt`
+
 ## Usage
 Use `f` flag to set e or d for Encryption or Decryption. 
 

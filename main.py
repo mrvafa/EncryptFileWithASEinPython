@@ -1,3 +1,4 @@
+#! /usr/bin/python3.6
 import argparse
 from getpass import getpass
 

@@ -43,8 +43,8 @@ main.py: error: the following arguments are required: -f/--function, -p/--path
 
 ## Example 
 ```
-main -f e -p main.py # encryption 
-main -f d -p main.encrypted # decryption 
+python main.py -f e -p main.py # encryption 
+python main.py -f d -p main.encrypted # decryption 
 ```
 
 ## Licence

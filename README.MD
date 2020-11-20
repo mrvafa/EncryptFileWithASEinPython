@@ -48,4 +48,4 @@ main -f d -p main.encrypted # decryption
 ```
 
 ## Licence
-This code is other MIT licence. for more [licence](read). 
+This code is other MIT licence. for more [read](LICENSE). 
